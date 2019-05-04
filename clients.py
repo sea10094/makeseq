@@ -3,12 +3,7 @@ import os
 class Client():
    
 
-   def __init__(self, clients_dir, output):
-       osstr1 = 'mkdir -p ' + output
-       osstr2 = 'rm -f ' + output + '/*' 
-
-       os.system(osstr1)
-       os.system(osstr2)
+   def __init__(self, clients_dir):
        self.sqllist = []
        try:
          files = os.listdir(clients_dir)
